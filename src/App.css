@@ -1,38 +1,75 @@
-.App {
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.homepage {
+  background-image: url("");
+  background-size: cover;
+  color: black;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.login-page {
+  background-color: #F0F8FF;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px;
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dashboard {
+  background-color: #FFFFE0;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-top: 30px;
+  margin: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.box:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box h2 {
+  font-weight: bold;
 }
+
+.box p {
+  font-weight: bold;
+  color: #999;
+  margin-top: 10px;
+}
+

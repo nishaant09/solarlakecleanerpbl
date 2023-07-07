@@ -1,4 +1,4 @@
-/* App.css */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,12 +6,16 @@ body {
 }
 
 .homepage {
-  background-image: url("");
+  background: linear-gradient(to bottom, #daf2dc, #81b7d2);
   background-size: cover;
   color: black;
   text-align: center;
   padding: 100px 0;
+  height: 100vh; 
+  transition: opacity 0.3 ease;
 }
+
+
 
 .heading {
   font-weight: bold;
@@ -29,24 +33,79 @@ body {
 }
 
 .login-page {
-  background-color: #F0F8FF;
+  background: linear-gradient(to bottom,  #1868ae, #c6d7eb);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.message {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.login-form {
   text-align: center;
 }
 
-.login-form input[type="text"],
-.login-form input[type="password"] {
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  color: black;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
   padding: 10px;
   margin: 10px;
+  width: 200px;
+  border: 2px solid black;
+  transition: border-color 0.3s;
+  border-radius:8px;
 }
 
-.dashboard {
-  background-color: #FFFFE0;
-  padding: 20px;
+.input-group input[type="text"]:hover,
+.input-group input[type="password"]:hover {
+  border-color: #000000;
 }
+
+.login-page button {
+  animation: bubble 2s infinite;
+  border: 2px solid black;
+  padding: 5px 10px;
+  background-color: #d624b6;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius:8px;
+}
+
+.login-page button:hover {
+  background-color: #a61e8d;
+}
+.dashboard {
+  background: linear-gradient(to bottom, #e52165, #0d1137);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 20px; 
+  height:100vh;
+}
+
 
 .box {
-  display: inline-block;
   width: 200px;
   height: 150px;
   background-color: white;
@@ -56,20 +115,18 @@ body {
   margin: 20px;
   cursor: pointer;
   transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 8px;
 }
 
-.box:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.box h2 {
+.check-button {
+  display: block;
+  margin-top: 25px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
   font-weight: bold;
+  border-radius: 4px;
 }
 
-.box p {
-  font-weight: bold;
-  color: #999;
-  margin-top: 10px;
-}
 

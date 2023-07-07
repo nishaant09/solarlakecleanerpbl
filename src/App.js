@@ -10,13 +10,16 @@ const App = () => {
   const [area, setArea] = useState(0);
   const [efficiency, setEfficiency] = useState(0);
 
+  const handleCheck=(randomValue)=>{
+    console.log(randomValue);
+  }
+
   const handleButtonClick = () => {
     setCurrentPage('login');
   };
 
   const handleLogin = (username, password) => {
-    // Add your login logic here
-    // For demonstration purposes, any non-empty values are considered valid
+    
     if (username && password) {
       setCurrentPage('dashboard');
       setLoggedIn(true);
@@ -54,6 +57,7 @@ const App = () => {
           time={time}
           area={area}
           efficiency={efficiency}
+          handleCheck={handleCheck}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
         />

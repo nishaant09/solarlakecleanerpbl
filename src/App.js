@@ -9,6 +9,7 @@ const App = () => {
   const [time, setTime] = useState(0);
   const [area, setArea] = useState(0);
   const [efficiency, setEfficiency] = useState(0);
+  const [waste, setWaste]= useState(0);
 
   const handleCheck=(randomValue)=>{
     console.log(randomValue);

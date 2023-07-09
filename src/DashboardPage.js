@@ -1,8 +1,14 @@
 import React from 'react';
+import GalleryPage from './GalleryPage';
 
-const DashboardPage = ({ time, area, efficiency, handleCheck }) => {
+const DashboardPage = ({ time, area, efficiency, waste, handleCheck }) => {
+
+     const handleShowResults = () => {
+   
+    console.log('Show Results');
+  };
   const generateRandomValue = () => {
-    const randomValue = Math.floor(Math.random() * 51); // Generates a random value between 0 and 50
+    const randomValue = Math.floor(Math.random() * 51); 
     handleCheck(randomValue);
   };
 
@@ -26,9 +32,17 @@ const DashboardPage = ({ time, area, efficiency, handleCheck }) => {
         <span>{efficiency}</span>
         <button className="check-button" onClick={generateRandomValue}>Check</button>
       </div>
+      <div className="box">
+        <h2>Waste Collected (kg)</h2>
+        <p>Shows the amount of waste collected in kilograms</p>
+        <span>{waste}</span>
+        <button className="check-button" onClick={generateRandomValue}>Check</button>
+      </div>
+      <button className="show-results-button" onClick={handleShowResults}>
+        Show Results
+      </button>
     </div>
   );
 };
 
 export default DashboardPage;
-
